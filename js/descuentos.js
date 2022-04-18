@@ -1,5 +1,6 @@
-//const precioOriginal  = 120;
-//const descuento = 18;
+//onst precioOriginal  = 1200000;
+//const descuento = 50;
+
 const cupones = [
     "un_producto",
     "2_o_mas_de_dos_productos",
@@ -15,10 +16,9 @@ function calcularPrecioConDescuento(precio, descuento){
 function unClicYCalcula(){
     const inputPrice = document.getElementById("inputPrice");
     const priceValue = inputPrice.value;
-      
+ 
     //const inputDiscount = document.getElementById("inputDiscount");
     //const discountValue = inputDiscount.value;
-    
     const inputCupon = document.getElementById("InputCoupon");
     const cuponValue = inputCupon.value;
 
@@ -26,13 +26,13 @@ function unClicYCalcula(){
 
     switch(cuponValue){
         case cupones[0]:
-            descuento = 15;
+            descuento = 50;
             break ;
         case cupones[1]:
-            descuento = 30; 
+            descuento = 10; 
             break;
         case cupones[2]:
-            descuento = 25;  
+            descuento = 40;  
     }
 
     const precioConDescuento = calcularPrecioConDescuento(priceValue, descuento);
